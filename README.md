@@ -79,3 +79,27 @@ pip install pylint
 cd "Pruebas y Calidad/4.2/P1/source"
 pylint compute_statistics.py
 ```
+
+## Actividad 5.2 - Compute Sales
+
+### P1 - Compute Sales
+Calcula el costo total de ventas a partir del catálogo de precios (JSON) y el registro de ventas (JSON). Usa los archivos de apoyo A5.2.
+
+**Formato:** Catálogo = lista con `title` y `price`. Ventas = lista con `Product` y `Quantity`.
+
+```bash
+cd "Pruebas y Calidad/5.2/P1/source"
+python computeSales.py ../tests/TC1.ProductList.json ../tests/TC1.Sales.json
+python computeSales.py ../tests/TC1.ProductList.json ../tests/TC2.Sales.json
+python computeSales.py ../tests/TC1.ProductList.json ../tests/TC3.Sales.json
+```
+
+Salida: `results/SalesResults.txt` (legible, con total y tiempo de ejecución). Casos de prueba: TC1, TC2, TC3 (archivos en `tests/`).
+
+### Verificación con Flake8 y Pylint (5.2)
+```bash
+pip install flake8 pylint
+cd "Pruebas y Calidad/5.2/P1/source"
+flake8 compute_sales.py --max-line-length=100
+pylint compute_sales.py
+```

@@ -1,0 +1,3 @@
+# Herramientas de verificación (Actividad 4.2 y 5.2)
+pylint>=3.0.0
+flake8>=6.0.0
